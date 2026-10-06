@@ -1,0 +1,587 @@
+﻿/* ======================================================
+   TEMÁTICA NORDESTINA & CORDEL - ESTILO XILOGRAVURA
+   ====================================================== */
+
+:root {
+    --tom-terracota: #c86d51;
+    --tom-terracota-hover: #a34e34;
+    --tom-areia: #f7f3ec;
+    --tom-papel-cordel: #fbf8f3;
+    --cor-preto-xilo: #1a1817;
+    --cor-borda: #2c2825;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    color: var(--cor-preto-xilo);
+    background-color: var(--tom-areia);
+    background-image: radial-gradient(var(--tom-terracota) 0.5px, transparent 0.5px);
+    background-size: 24px 24px; /* Textura suave de papel artesanal */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER COM BORDA ILUSTRADA DE CORDEL */
+header {
+    background-color: var(--tom-papel-cordel);
+    padding: 15px 0;
+    border-bottom: 4px solid var(--cor-preto-xilo);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 0 var(--tom-terracota);
+}
+
+.hero-monogram {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto 15px auto;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--cor-preto-xilo);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-preto-xilo);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--tom-terracota);
+}
+
+.btn-nav {
+    background-color: var(--cor-preto-xilo);
+    color: #fff !important;
+    padding: 8px 14px;
+    border-radius: 0px;
+    border: 2px solid var(--cor-preto-xilo);
+    box-shadow: 3px 3px 0 var(--tom-terracota);
+    transition: all 0.2s ease;
+}
+
+.btn-nav:hover {
+    background-color: var(--tom-terracota);
+    box-shadow: 1px 1px 0 var(--cor-preto-xilo);
+    transform: translate(2px, 2px);
+}
+
+/* BANNER HERO DE CORDEL */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(26, 24, 23, 0.45), rgba(26, 24, 23, 0.45)), url('/img/Casal.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-bottom: 5px solid var(--cor-preto-xilo);
+}
+
+/* Sol em formato de Xilogravura no topo */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23fbf8f3'%3E%3Ccircle cx='50' cy='50' r='20'/%3E%3Cpath d='M50 0 L55 25 L50 20 L45 25 Z M50 100 L55 75 L50 80 L45 75 Z M0 50 L25 55 L20 50 L25 45 Z M100 50 L75 55 L80 50 L75 45 Z M15 15 L35 30 L30 30 L30 35 Z M85 85 L65 70 L70 70 L70 65 Z M15 85 L35 70 L30 70 L30 65 Z M85 15 L65 30 L70 30 L70 35 Z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+.hero-content {
+    padding: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.hero-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* TÍTULOS DAS SEÇÕES COM ILUSTRAÇÃO DE CACTUS / XILOGRAVURA */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+    color: var(--cor-preto-xilo);
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+/* Ícone de Sol + Onda em Xilogravura */
+.section-title::before {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 40px;
+    margin: 0 auto 10px auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%23c86d51'%3E%3Ccircle cx='32' cy='20' r='10'/%3E%3Cpath d='M 32 4 L 32 8 M 16 20 L 20 20 M 44 20 L 48 20 M 20 8 L 23 11 M 44 8 L 41 11' stroke='%23c86d51' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M4 48 C 12 48, 16 38, 24 38 C 32 38, 36 48, 44 48 C 52 48, 56 38, 60 38 L 60 44 C 52 44, 48 54, 44 54 C 36 54, 32 44, 24 44 C 16 44, 12 54, 4 54 Z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Linha Dupla Estilo Cordel abaixo dos Títulos */
+.section-title::after {
+    content: '━━━━━ ✤ ━━━━━';
+    display: block;
+    font-size: 0.9rem;
+    color: var(--tom-terracota);
+    margin-top: 8px;
+    letter-spacing: 3px;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+    color: #2c2825;
+    padding: 20px 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* CONTADOR REGRESSIVO COM ESTILO MOLDURA */
+#countdown {
+    background-color: var(--tom-papel-cordel);
+    text-align: center;
+    border-top: 3px solid var(--cor-preto-xilo);
+    border-bottom: 3px solid var(--cor-preto-xilo);
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: var(--cor-preto-xilo);
+}
+
+.time-box {
+    background: #fff;
+    padding: 15px 20px;
+    border: 3px solid var(--cor-preto-xilo);
+    box-shadow: 4px 4px 0 var(--tom-terracota);
+    min-width: 75px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    font-family: 'Georgia', serif;
+    color: var(--tom-terracota);
+}
+
+.time-box small {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ÁLBUM DE FOTOS / GALERIA DE CORDEL */
+#galeria {
+    background-color: var(--tom-areia);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.galeria-item {
+    position: relative;
+    border: 4px solid var(--cor-preto-xilo);
+    background-color: #fff;
+    padding: 10px 10px 45px 10px;
+    box-shadow: 6px 6px 0 var(--tom-terracota);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 4 / 4;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0 var(--cor-preto-xilo);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid var(--cor-preto-xilo);
+    filter: sepia(15%) contrast(105%);
+}
+
+.galeria-legenda {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    color: var(--cor-preto-xilo);
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+/* CARDS DE LOCAL E PRESENTES */
+.local-card {
+    background: var(--tom-papel-cordel);
+    padding: 30px;
+    border: 3px solid var(--cor-preto-xilo);
+    box-shadow: 5px 5px 0 var(--tom-terracota);
+    text-align: center;
+}
+
+.local-card h3 {
+    color: var(--cor-preto-xilo);
+    margin-top: 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.presentes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.card-presente {
+    background: var(--tom-papel-cordel);
+    border: 3px solid var(--cor-preto-xilo);
+    border-radius: 0px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 5px 5px 0 var(--tom-terracota);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-presente:hover {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 0 var(--cor-preto-xilo);
+}
+
+.card-presente.indisponivel {
+    background: #e9e5de;
+    border-color: #666;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+.card-presente h3 {
+    font-size: 1.1rem;
+    color: var(--cor-preto-xilo);
+    margin-bottom: 15px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.badge-comprado {
+    background: var(--cor-preto-xilo);
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 0px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* BOTÕES ESTILO CORDEL */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--tom-terracota);
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid var(--cor-preto-xilo);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--cor-preto-xilo);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--cor-preto-xilo);
+    color: #fff;
+    box-shadow: 2px 2px 0 var(--tom-terracota);
+    transform: translate(2px, 2px);
+}
+
+.btn-ver-ml {
+    display: inline-block;
+    background-color: #ffe600 !important;
+    color: var(--cor-preto-xilo) !important;
+    padding: 10px 15px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    border: 2px solid var(--cor-preto-xilo);
+    box-shadow: 3px 3px 0 var(--cor-preto-xilo);
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn-ver-ml:hover {
+    background-color: #f4dc00 !important;
+    box-shadow: 1px 1px 0 var(--cor-preto-xilo);
+    transform: translate(2px, 2px);
+}
+
+.btn-confirmar {
+    background-color: var(--tom-terracota) !important;
+    color: #fff !important;
+    border: 2px solid var(--cor-preto-xilo) !important;
+    padding: 10px 15px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    box-shadow: 3px 3px 0 var(--cor-preto-xilo);
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.btn-confirmar:hover {
+    background-color: var(--cor-preto-xilo) !important;
+    color: #fff !important;
+    box-shadow: 1px 1px 0 var(--tom-terracota);
+    transform: translate(2px, 2px);
+}
+
+/* HISTÓRIA E VERSÍCULO */
+.versiculo {
+    font-style: italic;
+    color: var(--tom-terracota);
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--cor-preto-xilo);
+    padding-left: 15px;
+    display: inline-block;
+    text-align: left;
+}
+
+.historia-texto-completo {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--cor-preto-xilo);
+    text-align: justify;
+}
+
+.dresscode, #confirmacao {
+    background-color: var(--tom-papel-cordel);
+    border-top: 3px solid var(--cor-preto-xilo);
+    border-bottom: 3px solid var(--cor-preto-xilo);
+}
+
+form#form-confirmacao {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 2px solid var(--cor-preto-xilo);
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 0 #ddd;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--tom-terracota);
+    box-shadow: 3px 3px 0 var(--cor-preto-xilo);
+}
+
+/* FOOTER COM ILUSTRAÇÃO DE BANDEIROTAS */
+footer {
+    background-color: var(--cor-preto-xilo);
+    color: #fff;
+    text-align: center;
+    padding: 35px 0 25px 0;
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    position: relative;
+    border-top: 5px solid var(--tom-terracota);
+}
+
+/* Bandeirinhas festivas no rodapé em SVG */
+footer::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 20' fill='%23c86d51'%3E%3Cpolygon points='0,0 30,20 60,0'/%3E%3C/svg%3E");
+    background-size: 40px 18px;
+    background-repeat: repeat-x;
+}
+
+/* --- Estilos para o Álbum de Sessões --- */
+.album-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background-color: #fff;
+    color: var(--cor-preto-xilo);
+    border: 2px solid var(--cor-preto-xilo);
+    padding: 8px 16px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 var(--cor-preto-xilo);
+    transition: all 0.2s ease;
+}
+
+.btn-filtro:hover, .btn-filtro.ativo {
+    background-color: var(--tom-terracota);
+    color: #fff;
+    box-shadow: 1px 1px 0 var(--cor-preto-xilo);
+    transform: translate(2px, 2px);
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.album-item {
+    position: relative;
+    border: 4px solid var(--cor-preto-xilo);
+    background-color: #fff;
+    padding: 10px 10px 45px 10px; /* Estilo Polaroid */
+    box-shadow: 6px 6px 0 var(--tom-terracota);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 4 / 4;
+    overflow: hidden;
+}
+
+.album-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0 var(--cor-preto-xilo);
+}
+
+.album-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid var(--cor-preto-xilo);
+    filter: sepia(10%) contrast(105%);
+}
+
+.album-legenda {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    right: 10px;
+    color: var(--cor-preto-xilo);
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
