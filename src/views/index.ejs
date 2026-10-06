@@ -61,32 +61,32 @@
         </div>
     </section>
 
-        <!-- Seção de Álbum de Fotos por Sessões -->
+    <!-- Seção de Álbum de Fotos por Sessões -->
     <section id="album-sessoes" class="container">
         <h2 class="section-title">Álbum dos Noivos</h2>
         <p class="intro-text">Momentos guardados com carinho, espalhados em capítulos da nossa história.</p>
 
         <!-- Botões / Abas para alternar entre as sessões -->
         <div class="album-filtros">
-            <button class="btn-filtro ativo" onclick="filtrarSessao('todas')">Todas</button>
-            <button class="btn-filtro" onclick="filtrarSessao('ensaio')">Ensaio Pré-Casamento</button>
-            <button class="btn-filtro" onclick="filtrarSessao('noivado')">O Noivado</button>
-            <button class="btn-filtro" onclick="filtrarSessao('viagens')">Nossas Viagens</button>
+            <button class="btn-filtro ativo" data-sessao="todas">Todas</button>
+            <button class="btn-filtro" data-sessao="ensaio">Ensaio Pré-Casamento</button>
+            <button class="btn-filtro" data-sessao="noivado">O Noivado</button>
+            <button class="btn-filtro" data-sessao="viagens">Nossas Viagens</button>
         </div>
 
         <!-- Grelha de Fotos Dinâmica -->
-    <div class="album-grid">
-        <% if (typeof fotos !== 'undefined' && fotos.length > 0) { %>
-            <% fotos.forEach(foto => { %>
-                <div class="album-item" data-sessao="<%= foto.sessao %>">
-                    <img src="<%= foto.src %>" alt="Foto do Álbum" loading="lazy">
-                    <div class="album-legenda"><%= foto.legenda %></div>
-                </div>
-            <% }) %>
-        <% } else { %>
-            <p>Nenhuma foto encontrada na pasta.</p>
-        <% } %>
-</div>
+        <div class="album-grid">
+            <% if (typeof fotos !== 'undefined' && fotos.length > 0) { %>
+                <% fotos.forEach(foto => { %>
+                    <div class="album-item" data-sessao="<%= foto.sessao %>">
+                        <img src="<%= foto.src %>" alt="Foto do Álbum" loading="lazy">
+                        <div class="album-legenda"><%= foto.legenda %></div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>Nenhuma foto encontrada na pasta.</p>
+            <% } %>
+        </div>
     </section>
 
     <section id="cerimonia" class="container">
@@ -113,9 +113,13 @@
         </div>
     </section>
 
+    <!-- Código de Vestimenta Atualizado com o texto pedido -->
     <section id="vestimenta" class="container text-center dresscode">
         <h2 class="section-title">Código de Vestimenta</h2>
-        <p>Basta orientar ninguém usar branco ou cor muito clara. Contamos com a colaboração de todos!</p>
+        <p>Querido convidado, sugerimos o traje <strong>esporte fino</strong> para celebrar conosco esse momento tão especial.</p>
+        <p style="margin-top: 12px; font-size: 0.95rem; color: #444;">
+            <strong>Orientação importante:</strong> Pedimos gentilmente que mulheres não usem branco ou cores parecidas, como off white, bege ou tons muito claros.
+        </p>
     </section>
 
     <section id="presentes" class="container lista-presentes">
@@ -159,35 +163,7 @@
         <p>&copy; 2026 - Casamento de <%= noivos %>. Feito com muito amor!</p>
     </footer>
 
+    <!-- Ficheiro JavaScript principal unificado -->
     <script src="/js/main.js"></script>
-    <script>
-      const targetDate = new Date('2025-10-18T16:00:00').getTime();
-
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const difference = targetDate - now;
-
-        if (difference <= 0) {
-          document.getElementById('dias').innerText = '00';
-          document.getElementById('horas').innerText = '00';
-          document.getElementById('minutos').innerText = '00';
-          document.getElementById('segundos').innerText = '00';
-          return;
-        }
-
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        document.getElementById('dias').innerText = String(days).padStart(2, '0');
-        document.getElementById('horas').innerText = String(hours).padStart(2, '0');
-        document.getElementById('minutos').innerText = String(minutes).padStart(2, '0');
-        document.getElementById('segundos').innerText = String(seconds).padStart(2, '0');
-      }
-
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
-    </script>
 </body>
 </html>
