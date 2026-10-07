@@ -97,7 +97,7 @@
             <div class="map-container">
                 <iframe src="<%= cerimonia.mapaEmbed %>" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <a href="https://maps.app.goo.gl/dbNnKbfFqWCEsUIo6?g_st=iw" target="_blank" class="btn">Ver Mapa Ampliado</a>
+            <a href="<%= cerimonia.linkMaps %>" target="_blank" class="btn">Ver Mapa Ampliado</a>
         </div>
     </section>
 
@@ -109,7 +109,7 @@
             <div class="map-container">
                 <iframe src="<%= recepcao.mapaEmbed %>" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <a href="https://maps.app.goo.gl/TmWABHVGKs1vYwLV8?g_st=iw" target="_blank" class="btn">Ver Mapa Ampliado</a>
+            <a href="<%= recepcao.linkMaps %>" target="_blank" class="btn">Ver Mapa Ampliado</a>
         </div>
     </section>
 
@@ -124,8 +124,10 @@
 
     <section id="presentes" class="container lista-presentes">
         <h2 class="section-title">Lista de Presentes</h2>
-        <p class="text-center" style="margin-bottom: 30px; color: #666;">
-            Fique à vontade para escolher um item! Ao clicar em <strong>"Ver no Mercado Livre"</strong>, poderá ver o produto e, em seguida, confirmar a escolha para que ele fique indisponível para outros convidados.
+        <p class="text-center" style="margin-bottom: 30px; color: #666; line-height: 1.6;">
+            Fique à vontade para escolher um ou mais itens! Ao clicar em <strong>"Ver no Mercado Livre"</strong>, poderá ver o produto, caso compre, em seguida confirme a escolha para que ele fique indisponível para outros convidados.
+            <br><br>
+            Fique à vontade também para nos presentear com itens fora da lista e, se servir como dica, nossa casa está em construção.
         </p>
         <div class="presentes-grid">
             <% presentes.forEach(item => { %>

@@ -24,7 +24,7 @@ async function garantirTabelas() {
             );
         `);
 
-        // Verifica se já existem presentes; se não, insere os 31 automaticamente
+        // Verifica se já existem presentes; se não, insere os itens automaticamente
         const resCount = await pool.query('SELECT COUNT(*) FROM presentes');
         if (parseInt(resCount.rows[0].count) === 0) {
             const presentesIniciais = [
@@ -58,7 +58,10 @@ async function garantirTabelas() {
                 [28, 'Assadeira 34 cm', 'https://www.mercadolivre.com.br/molde-antiaderente-de-teflon-tramontina-assadeira-cinza-brasileiro-de-34-cm/p/MLB27649798'],
                 [29, 'Kit Vinho', 'https://www.mercadolivre.com.br/kit-abridor-de-vinho-eletrico-inox-recarregavel-usb/up/MLBU1979761425'],
                 [30, 'Jogo Americano de bambu', 'https://www.mercadolivre.com.br/jogo-lugar-americano-bambu-cru-8-unidades-mimo-style-promo/up/MLBU601767760'],
-                [31, 'Jogo de potes Tramontina', 'https://www.mercadolivre.com.br/jogo-de-potes-para-alimentos-tramontina-341-7-pecas/up/MLBU3957282958']
+                [31, 'Jogo de potes Tramontina', 'https://www.mercadolivre.com.br/jogo-de-potes-para-alimentos-tramontina-341-7-pecas/up/MLBU3957282958'],
+                [32, 'Conjunto 3 Travessas Porcelana Retangular Para Servir Buffet', 'https://www.mercadolivre.com.br/conjunto-3-travessas-porcelana-retangular-para-servir-buffet/up/MLBU5358583752?pdp_filters=item_id%3AMLB772989494'],
+                [33, 'Kit 6 Jogos Americano Bambu Elegante Mesa Posta Premium', 'https://www.mercadolivre.com.br/kit-6-jogos-americano-bambu-elegante-mesa-posta-premium-casa/up/MLBU3985933742?pdp_filters=item_id%3AMLB6801469452'],
+                [34, 'Jogo De Panelas 7 Ceramic Life Smart Plus Areia Brinox', 'https://www.mercadolivre.com.br/jogo-de-panelas-7-ceramic-life-smart-plus-areia-brinox/up/MLBU3491177949?pdp_filters=item_id%3AMLB5810626260']
             ];
 
             for (const p of presentesIniciais) {
@@ -84,16 +87,16 @@ const dadosEstaticos = {
     historiaTexto: "Somos de lugares totalmente diferentes e o destino nos juntou. Nos conhecemos na faculdade em 2018 e desde o primeiro contato nossa aproximação e união é plano de Deus. É indescritível, é único e verdadeiro. São quase 8 anos de grande momentos, grandes conquistas, amizade e amor. E agora estamos dando o passo mais importante do nosso relacionamento, o casamento…",
     cerimonia: {
         local: "Capela de Nossa Senhora da Boa Viagem",
-        endereco: "Estância, Sergipe",
+        endereco: "Av. Jurandy Oliveira Porto - Saco do Rio Real, Estância - SE",
         horario: "16h",
-        mapaEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.3323055416045!2d-37.44186502507851!3d-11.297799988863645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x719d8a668450553%3A0xc62f8562e3b7c3a2!2sCapela%20de%20Nossa%20Senhora%20da%20Boa%20Viagem!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr",
-        linkMaps: "https://maps.app.goo.gl/dbNnKbfFqWCEsUIo6?g_st=iw"
+        mapaEmbed: "https://maps.google.com/maps?q=Capela+de+Nossa+Senhora+da+Boa+Viagem+Estancia+SE&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        linkMaps: "https://www.google.com/maps/search/?api=1&query=Capela+de+Nossa+Senhora+da+Boa+Viagem+Estancia+SE"
     },
     recepcao: {
         local: "Casa Gahulu",
-        endereco: "Estância, Sergipe",
-        mapaEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.479182390123!2d-37.4179369!3d-11.285554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x719d8bc0312c6a9%3A0x8e1f1c1c1c1c1c1c!2sCasa%20Gahulu!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr",
-        linkMaps: "https://maps.app.goo.gl/TmWABHVGKs1vYwLV8?g_st=iw"
+        endereco: "Zeca de Loia, Estância - SE",
+        mapaEmbed: "https://maps.google.com/maps?q=Casa+Gahulu+Estancia+SE&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        linkMaps: "https://www.google.com/maps/search/?api=1&query=Casa+Gahulu+Zeca+de+Loia+Estancia+SE"
     }
 };
 
